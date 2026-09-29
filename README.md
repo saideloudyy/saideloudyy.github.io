@@ -1,4 +1,4 @@
-#GymTrack
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -62,10 +62,7 @@
       min-height: 100vh;
     }
 
-    /* =========================
-       SIDEBAR
-    ========================= */
-
+    /* SIDEBAR */
     .sidebar {
       width: 250px;
       background: var(--card);
@@ -133,10 +130,7 @@
       gap: 8px;
     }
 
-    /* =========================
-       MAIN
-    ========================= */
-
+    /* MAIN */
     .main {
       margin-left: 250px;
       width: calc(100% - 250px);
@@ -166,10 +160,7 @@
       gap: 10px;
     }
 
-    /* =========================
-       BUTTONS
-    ========================= */
-
+    /* BUTTONS */
     .btn {
       border: 1px solid var(--border);
       background: var(--card);
@@ -196,6 +187,7 @@
 
     .btn-danger {
       color: var(--danger);
+      border-color: var(--danger);
     }
 
     .btn-success {
@@ -209,10 +201,7 @@
       font-size: 13px;
     }
 
-    /* =========================
-       SECTIONS
-    ========================= */
-
+    /* SECTIONS & GRIDS */
     .section {
       display: none;
     }
@@ -226,17 +215,9 @@
       gap: 18px;
     }
 
-    .grid-4 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
     .card {
       background: var(--card);
@@ -286,21 +267,15 @@
       font-size: 18px;
     }
 
-    .muted {
-      color: var(--muted);
-    }
+    .muted { color: var(--muted); }
 
-    /* =========================
-       TEMPLATES
-    ========================= */
-
+    /* TEMPLATES & ZONES */
     .template-card {
       position: relative;
+      margin-bottom: 20px;
     }
 
-    .template-card h3 {
-      margin-bottom: 7px;
-    }
+    .template-card h3 { margin-bottom: 7px; }
 
     .template-meta {
       color: var(--muted);
@@ -337,9 +312,7 @@
       align-items: center;
     }
 
-    .exercise-list {
-      padding: 10px 15px 15px;
-    }
+    .exercise-list { padding: 10px 15px 15px; }
 
     .exercise-row {
       display: grid;
@@ -350,27 +323,12 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .exercise-row:last-child {
-      border-bottom: 0;
-    }
+    .exercise-row:last-child { border-bottom: 0; }
+    .exercise-name { font-weight: 650; }
+    .exercise-detail { font-size: 13px; color: var(--muted); }
 
-    .exercise-name {
-      font-weight: 650;
-    }
-
-    .exercise-detail {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* =========================
-       FORMS
-    ========================= */
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
+    /* FORMS */
+    .form-group { margin-bottom: 15px; }
     .form-group label {
       display: block;
       font-size: 13px;
@@ -379,9 +337,7 @@
       color: var(--muted);
     }
 
-    input,
-    select,
-    textarea {
+    input, select, textarea {
       width: 100%;
       padding: 11px 12px;
       border: 1px solid var(--border);
@@ -391,17 +347,12 @@
       outline: none;
     }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
+    input:focus, select:focus, textarea:focus {
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
+    textarea { resize: vertical; min-height: 100px; }
 
     .form-row {
       display: grid;
@@ -415,10 +366,7 @@
       gap: 12px;
     }
 
-    /* =========================
-       MODAL
-    ========================= */
-
+    /* MODAL */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -445,9 +393,7 @@
       box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
     }
 
-    .modal-large {
-      max-width: 1000px;
-    }
+    .modal-large { max-width: 1000px; }
 
     .modal-header {
       display: flex;
@@ -470,10 +416,7 @@
       margin-top: 20px;
     }
 
-    /* =========================
-       WORKOUT BUILDER
-    ========================= */
-
+    /* WORKOUT BUILDER */
     .builder-zone {
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -489,9 +432,7 @@
       justify-content: space-between;
     }
 
-    .builder-exercises {
-      padding: 12px;
-    }
+    .builder-exercises { padding: 12px; }
 
     .builder-exercise {
       display: grid;
@@ -501,9 +442,7 @@
       align-items: center;
     }
 
-    .builder-exercise:last-child {
-      margin-bottom: 0;
-    }
+    .builder-exercise:last-child { margin-bottom: 0; }
 
     .add-zone-area {
       border: 2px dashed var(--border);
@@ -513,18 +452,9 @@
       margin-top: 15px;
     }
 
-    /* =========================
-       WEIGHT
-    ========================= */
-
-    .weight-input {
-      display: flex;
-      gap: 8px;
-    }
-
-    .weight-input input {
-      flex: 1;
-    }
+    /* WEIGHT TRACKER & UNITS */
+    .weight-input { display: flex; gap: 8px; }
+    .weight-input input { flex: 1; }
 
     .unit-toggle {
       display: flex;
@@ -562,10 +492,7 @@
       background: var(--card-2);
     }
 
-    /* =========================
-       SUGGESTIONS
-    ========================= */
-
+    /* SUGGESTIONS */
     .suggestion {
       border: 1px solid var(--border);
       background: var(--card-2);
@@ -578,19 +505,10 @@
       gap: 10px;
     }
 
-    .suggestion-name {
-      font-weight: 700;
-    }
+    .suggestion-name { font-weight: 700; }
+    .suggestion-zone { font-size: 12px; color: var(--muted); }
 
-    .suggestion-zone {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    /* =========================
-       EMPTY
-    ========================= */
-
+    /* EMPTY STATES & TOAST */
     .empty {
       text-align: center;
       padding: 40px 20px;
@@ -601,10 +519,6 @@
       font-size: 40px;
       margin-bottom: 10px;
     }
-
-    /* =========================
-       TOAST
-    ========================= */
 
     .toast {
       position: fixed;
@@ -626,42 +540,21 @@
       transform: translateY(0);
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
-    .mobile-header {
-      display: none;
-    }
+    /* MOBILE HEADER */
+    .mobile-header { display: none; }
 
     @media (max-width: 1100px) {
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 800px) {
-      .sidebar {
-        display: none;
-      }
-
-      .main {
-        margin-left: 0;
-        width: 100%;
-        padding: 16px;
-        padding-top: 75px;
-      }
+      .sidebar { display: none; }
+      .main { margin-left: 0; width: 100%; padding: 16px; padding-top: 75px; }
 
       .mobile-header {
         display: flex;
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 0; left: 0; right: 0;
         height: 60px;
         background: var(--card);
         border-bottom: 1px solid var(--border);
@@ -671,60 +564,22 @@
         padding: 10px 15px;
       }
 
-      .mobile-menu {
-        display: flex;
-        gap: 6px;
-      }
-
+      .mobile-menu { display: flex; gap: 6px; }
       .mobile-menu button {
-        border: 0;
-        background: transparent;
-        color: var(--muted);
-        padding: 7px;
-        font-size: 18px;
+        border: 0; background: transparent;
+        color: var(--muted); padding: 7px; font-size: 18px;
       }
 
-      .topbar h1 {
-        font-size: 24px;
-      }
-
-      .grid-4,
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row,
-      .form-row-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .exercise-row {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .builder-exercise {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .top-actions {
-        flex-wrap: wrap;
-      }
+      .topbar h1 { font-size: 24px; }
+      .grid-4, .grid-3, .grid-2, .form-row, .form-row-3 { grid-template-columns: 1fr; }
+      .exercise-row, .builder-exercise { grid-template-columns: 1fr 1fr; }
+      .top-actions { flex-wrap: wrap; }
     }
 
     @media (max-width: 500px) {
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .top-actions {
-        width: 100%;
-      }
-
-      .top-actions .btn {
-        flex: 1;
-      }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .top-actions { width: 100%; }
+      .top-actions .btn { flex: 1; }
     }
   </style>
 </head>
@@ -750,7 +605,6 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-
     <div class="logo">
       <div class="logo-icon">🏋️</div>
       <span>GymTrack</span>
@@ -795,7 +649,6 @@
         onchange="importData(event)"
       />
     </div>
-
   </aside>
 
   <!-- MAIN -->
@@ -803,7 +656,6 @@
 
     <!-- DASHBOARD -->
     <section id="dashboard" class="section active">
-
       <div class="topbar">
         <div>
           <h1>Dashboard</h1>
@@ -822,7 +674,6 @@
       </div>
 
       <div class="grid grid-4">
-
         <div class="card stat-card">
           <div class="stat-icon">📋</div>
           <h3 id="statTemplates">0</h3>
@@ -846,13 +697,11 @@
           <h3 id="statWorkouts">0</h3>
           <p>Completed Workouts</p>
         </div>
-
       </div>
 
       <div style="height:18px;"></div>
 
       <div class="grid grid-2">
-
         <div class="card">
           <div class="card-header">
             <h2>Recent Weight</h2>
@@ -860,7 +709,6 @@
               View All
             </button>
           </div>
-
           <div id="dashboardWeight"></div>
         </div>
 
@@ -871,18 +719,13 @@
               View All
             </button>
           </div>
-
           <div id="dashboardTemplates"></div>
         </div>
-
       </div>
-
     </section>
-
 
     <!-- TEMPLATES -->
     <section id="templates" class="section">
-
       <div class="topbar">
         <div>
           <h1>Workout Templates</h1>
@@ -895,13 +738,10 @@
       </div>
 
       <div id="templatesContainer"></div>
-
     </section>
-
 
     <!-- WEIGHT -->
     <section id="weight" class="section">
-
       <div class="topbar">
         <div>
           <h1>Weight Tracker</h1>
@@ -910,9 +750,7 @@
       </div>
 
       <div class="grid grid-2">
-
         <div class="card">
-
           <div class="card-header">
             <h2>Log Weight</h2>
           </div>
@@ -924,67 +762,41 @@
 
           <div class="form-group">
             <label>Weight</label>
-
             <div class="weight-input">
-              <input
-                type="number"
-                step="0.1"
-                id="weightValue"
-                placeholder="e.g. 80"
-              />
-
+              <input type="number" step="0.1" id="weightValue" placeholder="e.g. 80" />
               <div class="unit-toggle">
-                <button
-                  id="kgButton"
-                  class="active"
-                  onclick="setWeightUnit('kg')"
-                >
-                  KG
-                </button>
-
-                <button
-                  id="lbButton"
-                  onclick="setWeightUnit('lb')"
-                >
-                  LB
-                </button>
+                <button id="kgButton" class="active" onclick="setWeightUnit('kg')">KG</button>
+                <button id="lbButton" onclick="setWeightUnit('lb')">LB</button>
               </div>
             </div>
           </div>
 
           <div class="form-group">
             <label>Notes</label>
-            <textarea
-              id="weightNotes"
-              placeholder="Optional notes..."
-            ></textarea>
+            <textarea id="weightNotes" placeholder="Optional notes..."></textarea>
           </div>
 
           <button class="btn btn-primary" onclick="addWeight()">
             Save Weight
           </button>
-
         </div>
-
 
         <div class="card">
-
           <div class="card-header">
-            <h2>Weight History</h2>
+            <h2>Weight Trend</h2>
           </div>
-
+          <canvas id="weightChart" style="width:100%; height:180px; margin-bottom:15px;"></canvas>
+          
+          <div class="card-header">
+            <h2>History Log</h2>
+          </div>
           <div id="weightHistory" class="weight-history"></div>
-
         </div>
-
       </div>
-
     </section>
-
 
     <!-- EXERCISE SUGGESTIONS -->
     <section id="suggestions" class="section">
-
       <div class="topbar">
         <div>
           <h1>Exercise Library</h1>
@@ -993,47 +805,29 @@
       </div>
 
       <div id="suggestionsContainer"></div>
-
     </section>
 
   </main>
-
 </div>
 
-
 <!-- TEMPLATE MODAL -->
-
 <div id="templateModal" class="modal-overlay">
-
   <div class="modal modal-large">
-
     <div class="modal-header">
       <h2 id="templateModalTitle">Create Workout Template</h2>
-
-      <button
-        class="modal-close"
-        onclick="closeModal('templateModal')"
-      >
-        ×
-      </button>
+      <button class="modal-close" onclick="closeModal('templateModal')">×</button>
     </div>
 
     <input type="hidden" id="editingTemplateId" />
 
     <div class="form-group">
       <label>Template Name</label>
-      <input
-        id="templateName"
-        placeholder="e.g. Push Day"
-      />
+      <input id="templateName" placeholder="e.g. Push Day" />
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <input
-        id="templateDescription"
-        placeholder="e.g. Chest, shoulders and triceps"
-      />
+      <input id="templateDescription" placeholder="e.g. Chest, shoulders and triceps" />
     </div>
 
     <div class="card-header">
@@ -1043,101 +837,48 @@
     <div id="builderZones"></div>
 
     <div class="add-zone-area">
-
       <div class="form-row">
-
-        <input
-          id="newZoneName"
-          placeholder="Zone / muscle group e.g. Chest"
-        />
-
-        <button
-          class="btn btn-primary"
-          onclick="addZoneToBuilder()"
-        >
+        <input id="newZoneName" placeholder="Zone / muscle group e.g. Chest" />
+        <button class="btn btn-primary" onclick="addZoneToBuilder()">
           + Add Zone
         </button>
-
       </div>
-
     </div>
 
     <div class="modal-footer">
-
-      <button
-        class="btn"
-        onclick="closeModal('templateModal')"
-      >
-        Cancel
-      </button>
-
-      <button
-        class="btn btn-primary"
-        onclick="saveTemplate()"
-      >
-        Save Template
-      </button>
-
+      <button class="btn" onclick="closeModal('templateModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveTemplate()">Save Template</button>
     </div>
-
   </div>
-
 </div>
 
-
-<!-- WORKOUT MODAL -->
-
+<!-- WORKOUT EXECUTION MODAL -->
 <div id="workoutModal" class="modal-overlay">
-
   <div class="modal modal-large">
-
     <div class="modal-header">
-      <h2 id="workoutTitle">Workout</h2>
-
-      <button
-        class="modal-close"
-        onclick="closeModal('workoutModal')"
-      >
-        ×
-      </button>
+      <h2 id="workoutTitle">Workout Session</h2>
+      <button class="modal-close" onclick="closeModal('workoutModal')">×</button>
     </div>
 
     <div id="workoutContent"></div>
 
     <div class="modal-footer">
-
-      <button
-        class="btn"
-        onclick="closeModal('workoutModal')"
-      >
-        Close
-      </button>
-
-      <button
-        class="btn btn-success"
-        onclick="completeWorkout()"
-      >
-        ✓ Complete Workout
-      </button>
-
+      <button class="btn" onclick="closeModal('workoutModal')">Close</button>
+      <button class="btn btn-success" onclick="completeWorkout()">✓ Complete Workout</button>
     </div>
-
   </div>
-
 </div>
 
-
 <!-- TOAST -->
-
 <div id="toast" class="toast"></div>
 
-
 <script>
-/* =========================================================
-   DATA
-========================================================= */
-
+/* DATA & INITIALIZATION */
 const STORAGE_KEY = "gymtrack_data";
+
+function generateId() {
+  return Date.now().toString(36) + Math.random().toString(36).substring(2, 9);
+}
 
 const defaultData = {
   templates: [
@@ -1150,58 +891,20 @@ const defaultData = {
           id: generateId(),
           name: "Chest",
           exercises: [
-            {
-              id: generateId(),
-              name: "Barbell Bench Press",
-              sets: 4,
-              reps: 8,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Incline Dumbbell Press",
-              sets: 3,
-              reps: 10,
-              weight: 0
-            }
+            { id: generateId(), name: "Barbell Bench Press", sets: 4, reps: 8, weight: 60 },
+            { id: generateId(), name: "Incline Dumbbell Press", sets: 3, reps: 10, weight: 22 }
           ]
         },
         {
           id: generateId(),
           name: "Shoulders",
           exercises: [
-            {
-              id: generateId(),
-              name: "Overhead Press",
-              sets: 3,
-              reps: 8,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Lateral Raises",
-              sets: 3,
-              reps: 12,
-              weight: 0
-            }
-          ]
-        },
-        {
-          id: generateId(),
-          name: "Triceps",
-          exercises: [
-            {
-              id: generateId(),
-              name: "Tricep Pushdown",
-              sets: 3,
-              reps: 12,
-              weight: 0
-            }
+            { id: generateId(), name: "Overhead Press", sets: 3, reps: 8, weight: 40 },
+            { id: generateId(), name: "Lateral Raises", sets: 3, reps: 12, weight: 10 }
           ]
         }
       ]
     },
-
     {
       id: generateId(),
       name: "Pull Day",
@@ -1211,1701 +914,510 @@ const defaultData = {
           id: generateId(),
           name: "Back",
           exercises: [
-            {
-              id: generateId(),
-              name: "Lat Pulldown",
-              sets: 4,
-              reps: 10,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Seated Cable Row",
-              sets: 3,
-              reps: 10,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Barbell Row",
-              sets: 3,
-              reps: 8,
-              weight: 0
-            }
+            { id: generateId(), name: "Lat Pulldown", sets: 4, reps: 10, weight: 50 },
+            { id: generateId(), name: "Barbell Row", sets: 3, reps: 8, weight: 50 }
           ]
         },
-
         {
           id: generateId(),
           name: "Biceps",
           exercises: [
-            {
-              id: generateId(),
-              name: "Barbell Curl",
-              sets: 3,
-              reps: 10,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Hammer Curl",
-              sets: 3,
-              reps: 12,
-              weight: 0
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      id: generateId(),
-      name: "Leg Day",
-      description: "Quads, hamstrings, glutes and calves",
-      zones: [
-        {
-          id: generateId(),
-          name: "Quads",
-          exercises: [
-            {
-              id: generateId(),
-              name: "Barbell Squat",
-              sets: 4,
-              reps: 8,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Leg Press",
-              sets: 3,
-              reps: 10,
-              weight: 0
-            }
-          ]
-        },
-
-        {
-          id: generateId(),
-          name: "Hamstrings",
-          exercises: [
-            {
-              id: generateId(),
-              name: "Romanian Deadlift",
-              sets: 3,
-              reps: 10,
-              weight: 0
-            },
-            {
-              id: generateId(),
-              name: "Leg Curl",
-              sets: 3,
-              reps: 12,
-              weight: 0
-            }
-          ]
-        },
-
-        {
-          id: generateId(),
-          name: "Calves",
-          exercises: [
-            {
-              id: generateId(),
-              name: "Standing Calf Raise",
-              sets: 4,
-              reps: 15,
-              weight: 0
-            }
+            { id: generateId(), name: "Barbell Curl", sets: 3, reps: 10, weight: 25 }
           ]
         }
       ]
     }
   ],
-
   weights: [],
-
   workoutHistory: [],
-
   theme: "light"
 };
 
-
-/* =========================================================
-   STATE
-========================================================= */
-
-let data = loadData();
-
-let currentWeightUnit = "kg";
-
-let currentWorkoutTemplate = null;
-
-
-/* =========================================================
-   INITIALIZATION
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  applyTheme();
-
-  document.getElementById("weightDate").value =
-    new Date().toISOString().split("T")[0];
-
-  renderAll();
-
-});
-
-
-/* =========================================================
-   STORAGE
-========================================================= */
-
-function loadData() {
-
-  const saved = localStorage.getItem(STORAGE_KEY);
-
-  if (!saved) {
-    return defaultData;
-  }
-
-  try {
-
-    const parsed = JSON.parse(saved);
-
-    return {
-      ...defaultData,
-      ...parsed
-    };
-
-  } catch (error) {
-
-    console.error("Could not load saved data.", error);
-
-    return defaultData;
-  }
-}
-
-
-function saveData() {
-
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify(data)
-  );
-
-}
-
-
-/* =========================================================
-   ID
-========================================================= */
-
-function generateId() {
-
-  return Date.now().toString(36) +
-    Math.random().toString(36).substring(2, 9);
-
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-function showSection(sectionId) {
-
-  document.querySelectorAll(".section")
-    .forEach(section => {
-      section.classList.remove("active");
-    });
-
-  document
-    .getElementById(sectionId)
-    .classList.add("active");
-
-  document.querySelectorAll(".nav button")
-    .forEach(button => {
-
-      button.classList.remove("active");
-
-      if (button.dataset.section === sectionId) {
-        button.classList.add("active");
-      }
-
-    });
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-
-}
-
-
-/* =========================================================
-   THEME
-========================================================= */
-
-function toggleTheme() {
-
-  data.theme =
-    data.theme === "dark"
-      ? "light"
-      : "dark";
-
-  saveData();
-
-  applyTheme();
-
-}
-
-
-function applyTheme() {
-
-  document.body.classList.toggle(
-    "dark",
-    data.theme === "dark"
-  );
-
-}
-
-
-/* =========================================================
-   RENDER ALL
-========================================================= */
-
-function renderAll() {
-
-  renderDashboard();
-
-  renderTemplates();
-
-  renderWeightHistory();
-
-  renderSuggestions();
-
-}
-
-
-/* =========================================================
-   DASHBOARD
-========================================================= */
-
-function renderDashboard() {
-
-  const templateCount =
-    data.templates.length;
-
-  const exerciseCount =
-    data.templates.reduce(
-      (total, template) => {
-
-        return total +
-          template.zones.reduce(
-            (zoneTotal, zone) =>
-              zoneTotal + zone.exercises.length,
-            0
-          );
-
-      },
-      0
-    );
-
-  document.getElementById("statTemplates")
-    .textContent = templateCount;
-
-  document.getElementById("statExercises")
-    .textContent = exerciseCount;
-
-  document.getElementById("statWorkouts")
-    .textContent = data.workoutHistory.length;
-
-  const latestWeight =
-    data.weights.length
-      ? data.weights[data.weights.length - 1]
-      : null;
-
-  document.getElementById("statWeight")
-    .textContent = latestWeight
-      ? `${latestWeight.kg.toFixed(1)} KG`
-      : "--";
-
-  renderDashboardWeight();
-
-  renderDashboardTemplates();
-
-}
-
-
-function renderDashboardWeight() {
-
-  const container =
-    document.getElementById("dashboardWeight");
-
-  if (!data.weights.length) {
-
-    container.innerHTML = `
-      <div class="empty">
-        <div class="empty-icon">⚖️</div>
-        <p>No weight entries yet.</p>
-      </div>
-    `;
-
-    return;
-  }
-
-  const recent =
-    [...data.weights]
-      .reverse()
-      .slice(0, 5);
-
-  container.innerHTML =
-    recent.map(weight => {
-
-      return `
-        <div class="weight-entry">
-          <div>
-            <strong>${weight.kg.toFixed(1)} KG</strong>
-            <div class="exercise-detail">
-              ${weight.lb.toFixed(1)} LB
-            </div>
-          </div>
-
-          <div class="muted">
-            ${formatDate(weight.date)}
-          </div>
-        </div>
-      `;
-
-    }).join("");
-
-}
-
-
-function renderDashboardTemplates() {
-
-  const container =
-    document.getElementById("dashboardTemplates");
-
-  if (!data.templates.length) {
-
-    container.innerHTML = `
-      <div class="empty">
-        <div class="empty-icon">📋</div>
-        <p>No templates yet.</p>
-      </div>
-    `;
-
-    return;
-  }
-
-  container.innerHTML =
-    data.templates
-      .slice(0, 5)
-      .map(template => {
-
-        const exerciseCount =
-          template.zones.reduce(
-            (total, zone) =>
-              total + zone.exercises.length,
-            0
-          );
-
-        return `
-          <div class="weight-entry">
-            <div>
-              <strong>${escapeHtml(template.name)}</strong>
-
-              <div class="exercise-detail">
-                ${template.zones.length} zones ·
-                ${exerciseCount} exercises
-              </div>
-            </div>
-
-            <button
-              class="btn btn-small"
-              onclick="startWorkout('${template.id}')"
-            >
-              Start
-            </button>
-          </div>
-        `;
-
-      }).join("");
-
-}
-
-
-/* =========================================================
-   TEMPLATE RENDERING
-========================================================= */
-
-function renderTemplates() {
-
-  const container =
-    document.getElementById("templatesContainer");
-
-  if (!data.templates.length) {
-
-    container.innerHTML = `
-      <div class="card empty">
-        <div class="empty-icon">🏋️</div>
-        <h3>No workout templates</h3>
-        <p>Create your first workout plan.</p>
-
-        <br>
-
-        <button
-          class="btn btn-primary"
-          onclick="openTemplateModal()"
-        >
-          + Create Template
-        </button>
-      </div>
-    `;
-
-    return;
-  }
-
-  container.innerHTML =
-    `<div class="grid grid-2">
-      ${data.templates.map(template => {
-
-        return renderTemplateCard(template);
-
-      }).join("")}
-    </div>`;
-
-}
-
-
-function renderTemplateCard(template) {
-
-  const exerciseCount =
-    template.zones.reduce(
-      (total, zone) =>
-        total + zone.exercises.length,
-      0
-    );
-
-  return `
-    <div class="card template-card">
-
-      <div class="card-header">
-
-        <div>
-          <h3>${escapeHtml(template.name)}</h3>
-
-          <div class="template-meta">
-            ${escapeHtml(template.description || "Custom workout")}
-          </div>
-        </div>
-
-        <div>
-          <button
-            class="btn btn-small"
-            onclick="editTemplate('${template.id}')"
-          >
-            ✏️
-          </button>
-        </div>
-
-      </div>
-
-      <div class="template-meta">
-        💪 ${template.zones.length} zones
-        &nbsp; · &nbsp;
-        🏋️ ${exerciseCount} exercises
-      </div>
-
-      <div style="margin-bottom:15px;">
-
-        ${template.zones.map(zone => {
-
-          return `
-            <span style="
-              display:inline-block;
-              background:rgba(99,102,241,.1);
-              color:var(--primary);
-              padding:5px 9px;
-              border-radius:20px;
-              font-size:12px;
-              margin:2px;
-            ">
-              ${escapeHtml(zone.name)}
-            </span>
-          `;
-
-        }).join("")}
-
-      </div>
-
-      <div class="template-actions">
-
-        <button
-          class="btn btn-primary"
-          onclick="startWorkout('${template.id}')"
-        >
-          ▶ Start Workout
-        </button>
-
-        <button
-          class="btn"
-          onclick="editTemplate('${template.id}')"
-        >
-          Edit
-        </button>
-
-        <button
-          class="btn btn-danger"
-          onclick="deleteTemplate('${template.id}')"
-        >
-          Delete
-        </button>
-
-      </div>
-
-    </div>
-  `;
-}
-
-
-/* =========================================================
-   TEMPLATE MODAL
-========================================================= */
-
-function openTemplateModal(template = null) {
-
-  document.getElementById("templateModal")
-    .classList.add("show");
-
-  document.getElementById("editingTemplateId")
-    .value = template ? template.id : "";
-
-  document.getElementById("templateName")
-    .value = template ? template.name : "";
-
-  document.getElementById("templateDescription")
-    .value = template ? template.description : "";
-
-  document.getElementById("templateModalTitle")
-    .textContent = template
-      ? "Edit Workout Template"
-      : "Create Workout Template";
-
-  const builder =
-    document.getElementById("builderZones");
-
-  builder.innerHTML = "";
-
-  if (template) {
-
-    template.zones.forEach(zone => {
-
-      addZoneToBuilder(zone);
-
-    });
-
-  }
-
-}
-
-
-function editTemplate(id) {
-
-  const template =
-    data.templates.find(
-      template => template.id === id
-    );
-
-  if (!template) return;
-
-  openTemplateModal(template);
-
-}
-
-
-function closeModal(id) {
-
-  document.getElementById(id)
-    .classList.remove("show");
-
-}
-
-
-/* =========================================================
-   BUILDER
-========================================================= */
-
-function addZoneToBuilder(existingZone = null) {
-
-  const nameInput =
-    document.getElementById("newZoneName");
-
-  const zoneName =
-    existingZone
-      ? existingZone.name
-      : nameInput.value.trim();
-
-  if (!zoneName) {
-
-    showToast("Enter a zone name first.");
-
-    return;
-  }
-
-  const zoneId =
-    existingZone
-      ? existingZone.id
-      : generateId();
-
-  const zone = document.createElement("div");
-
-  zone.className = "builder-zone";
-
-  zone.dataset.zoneId = zoneId;
-
-  zone.innerHTML = `
-
-    <div class="builder-zone-header">
-
-      <strong>
-        ${escapeHtml(zoneName)}
-      </strong>
-
-      <button
-        class="btn btn-small btn-danger"
-        onclick="this.closest('.builder-zone').remove()"
-      >
-        Remove Zone
-      </button>
-
-    </div>
-
-    <div class="builder-exercises">
-
-      <div class="builder-exercise">
-
-        <strong>Exercise</strong>
-        <strong>Sets</strong>
-        <strong>Reps</strong>
-        <strong>Weight</strong>
-        <span></span>
-
-      </div>
-
-    </div>
-
-    <div style="padding:0 12px 12px;">
-
-      <button
-        class="btn btn-small"
-        onclick="addExerciseToBuilder(this)"
-      >
-        + Add Exercise
-      </button>
-
-    </div>
-  `;
-
-  const exerciseContainer =
-    zone.querySelector(".builder-exercises");
-
-  if (existingZone) {
-
-    existingZone.exercises.forEach(exercise => {
-
-      addExerciseToBuilder(
-        zone.querySelector(".builder-exercises"),
-        exercise
-      );
-
-    });
-
-  } else {
-
-    addExerciseToBuilder(
-      zone.querySelector(".builder-exercises")
-    );
-
-  }
-
-  document
-    .getElementById("builderZones")
-    .appendChild(zone);
-
-  nameInput.value = "";
-
-}
-
-
-function addExerciseToBuilder(buttonOrContainer, existingExercise = null) {
-
-  let container;
-
-  if (
-    buttonOrContainer &&
-    buttonOrContainer.classList &&
-    buttonOrContainer.classList.contains("builder-exercises")
-  ) {
-
-    container = buttonOrContainer;
-
-  } else {
-
-    container =
-      buttonOrContainer
-        .closest(".builder-zone")
-        .querySelector(".builder-exercises");
-
-  }
-
-  const row =
-    document.createElement("div");
-
-  row.className =
-    "builder-exercise";
-
-  row.dataset.exerciseId =
-    existingExercise
-      ? existingExercise.id
-      : generateId();
-
-  row.innerHTML = `
-
-    <input
-      type="text"
-      placeholder="Exercise name"
-      value="${existingExercise ? escapeAttribute(existingExercise.name) : ""}"
-    />
-
-    <input
-      type="number"
-      min="1"
-      value="${existingExercise ? existingExercise.sets : 3}"
-      title="Sets"
-    />
-
-    <input
-      type="number"
-      min="1"
-      value="${existingExercise ? existingExercise.reps : 10}"
-      title="Reps"
-    />
-
-    <input
-      type="number"
-      min="0"
-      step="0.5"
-      value="${existingExercise ? existingExercise.weight : 0}"
-      title="Weight"
-    />
-
-    <button
-      class="btn btn-small btn-danger"
-      onclick="this.parentElement.remove()"
-    >
-      ×
-    </button>
-  `;
-
-  container.appendChild(row);
-
-}
-
-
-/* =========================================================
-   SAVE TEMPLATE
-========================================================= */
-
-function saveTemplate() {
-
-  const name =
-    document.getElementById("templateName")
-      .value.trim();
-
-  const description =
-    document.getElementById("templateDescription")
-      .value.trim();
-
-  if (!name) {
-
-    showToast("Please enter a template name.");
-
-    return;
-  }
-
-  const zoneElements =
-    document.querySelectorAll(
-      "#builderZones .builder-zone"
-    );
-
-  const zones = [];
-
-  zoneElements.forEach(zoneElement => {
-
-    const zoneName =
-      zoneElement
-        .querySelector(".builder-zone-header strong")
-        .textContent.trim();
-
-    const exercises = [];
-
-    const exerciseRows =
-      zoneElement.querySelectorAll(
-        ".builder-exercises .builder-exercise"
-      );
-
-    exerciseRows.forEach(row => {
-
-      const inputs =
-        row.querySelectorAll("input");
-
-      if (!inputs[0].value.trim()) return;
-
-      exercises.push({
-
-        id:
-          row.dataset.exerciseId ||
-          generateId(),
-
-        name:
-          inputs[0].value.trim(),
-
-        sets:
-          Number(inputs[1].value) || 3,
-
-        reps:
-          Number(inputs[2].value) || 10,
-
-        weight:
-          Number(inputs[3].value) || 0
-
-      });
-
-    });
-
-    zones.push({
-
-      id:
-        zoneElement.dataset.zoneId ||
-        generateId(),
-
-      name: zoneName,
-
-      exercises
-
-    });
-
-  });
-
-  const editingId =
-    document.getElementById("editingTemplateId")
-      .value;
-
-  const template = {
-
-    id:
-      editingId ||
-      generateId(),
-
-    name,
-
-    description,
-
-    zones
-
-  };
-
-  if (editingId) {
-
-    const index =
-      data.templates.findIndex(
-        template => template.id === editingId
-      );
-
-    if (index !== -1) {
-
-      data.templates[index] =
-        template;
-
-    }
-
-  } else {
-
-    data.templates.push(template);
-
-  }
-
-  saveData();
-
-  renderAll();
-
-  closeModal("templateModal");
-
-  showToast(
-    editingId
-      ? "Template updated."
-      : "Template created."
-  );
-
-}
-
-
-/* =========================================================
-   DELETE TEMPLATE
-========================================================= */
-
-function deleteTemplate(id) {
-
-  const template =
-    data.templates.find(
-      template => template.id === id
-    );
-
-  if (!template) return;
-
-  const confirmed =
-    confirm(
-      `Delete "${template.name}"?`
-    );
-
-  if (!confirmed) return;
-
-  data.templates =
-    data.templates.filter(
-      template => template.id !== id
-    );
-
-  saveData();
-
-  renderAll();
-
-  showToast("Template deleted.");
-
-}
-
-
-/* =========================================================
-   WORKOUT
-========================================================= */
-
-function startWorkout(id) {
-
-  const template =
-    data.templates.find(
-      template => template.id === id
-    );
-
-  if (!template) return;
-
-  currentWorkoutTemplate =
-    JSON.parse(JSON.stringify(template));
-
-  document.getElementById("workoutTitle")
-    .textContent =
-      `🏋️ ${template.name}`;
-
-  const container =
-    document.getElementById("workoutContent");
-
-  container.innerHTML = `
-
-    <p class="muted" style="margin-bottom:20px;">
-      ${escapeHtml(template.description || "")}
-    </p>
-
-    ${template.zones.map(zone => `
-
-      <div class="zone">
-
-        <div class="zone-header">
-
-          <div class="zone-title">
-            💪 ${escapeHtml(zone.name)}
-          </div>
-
-        </div>
-
-        <div class="exercise-list">
-
-          ${zone.exercises.map((exercise, index) => `
-
-            <div class="exercise-row">
-
-              <div>
-                <div class="exercise-name">
-                  ${escapeHtml(exercise.name)}
-                </div>
-
-                <div class="exercise-detail">
-                  ${exercise.sets} sets ×
-                  ${exercise.reps} reps
-                </div>
-              </div>
-
-              <input
-                type="number"
-                min="0"
-                step="0.5"
-                class="workout-weight"
-                data-zone="${zone.id}"
-                data-exercise="${exercise.id}"
-                value="${exercise.weight || ""}"
-                placeholder="Weight"
-              />
-
-              <input
-                type="number"
-                min="1"
-                class="workout-sets"
-                value="${exercise.sets}"
-                placeholder="Sets"
-              />
-
-              <input
-                type="number"
-                min="1"
-                class="workout-reps"
-                value="${exercise.reps}"
-                placeholder="Reps"
-              />
-
-              <span></span>
-
-            </div>
-
-          `).join("")}
-
-        </div>
-
-      </div>
-
-    `).join("")}
-
-  `;
-
-  document
-    .getElementById("workoutModal")
-    .classList.add("show");
-
-}
-
-
-/* =========================================================
-   COMPLETE WORKOUT
-========================================================= */
-
-function completeWorkout() {
-
-  if (!currentWorkoutTemplate) return;
-
-  const workoutDate =
-    new Date().toISOString();
-
-  data.workoutHistory.push({
-
-    id: generateId(),
-
-    templateId:
-      currentWorkoutTemplate.id,
-
-    templateName:
-      currentWorkoutTemplate.name,
-
-    date:
-      workoutDate
-
-  });
-
-  saveData();
-
-  renderAll();
-
-  closeModal("workoutModal");
-
-  showToast("Workout completed! 💪");
-
-  currentWorkoutTemplate = null;
-
-}
-
-
-/* =========================================================
-   WEIGHT
-========================================================= */
-
-function setWeightUnit(unit) {
-
-  currentWeightUnit = unit;
-
-  document
-    .getElementById("kgButton")
-    .classList.toggle(
-      "active",
-      unit === "kg"
-    );
-
-  document
-    .getElementById("lbButton")
-    .classList.toggle(
-      "active",
-      unit === "lb"
-    );
-
-}
-
-
-function addWeight() {
-
-  const value =
-    Number(
-      document.getElementById("weightValue").value
-    );
-
-  const date =
-    document.getElementById("weightDate").value;
-
-  const notes =
-    document.getElementById("weightNotes")
-      .value.trim();
-
-  if (!value || value <= 0) {
-
-    showToast("Enter a valid weight.");
-
-    return;
-  }
-
-  if (!date) {
-
-    showToast("Select a date.");
-
-    return;
-  }
-
-  let kg;
-  let lb;
-
-  if (currentWeightUnit === "kg") {
-
-    kg = value;
-    lb = value * 2.2046226218;
-
-  } else {
-
-    lb = value;
-    kg = value / 2.2046226218;
-
-  }
-
-  data.weights.push({
-
-    id: generateId(),
-
-    date,
-
-    kg,
-
-    lb,
-
-    notes
-
-  });
-
-  data.weights.sort(
-    (a, b) =>
-      new Date(a.date) -
-      new Date(b.date)
-  );
-
-  saveData();
-
-  renderAll();
-
-  document.getElementById("weightValue").value = "";
-
-  document.getElementById("weightNotes").value = "";
-
-  showToast("Weight saved.");
-
-}
-
-
-function renderWeightHistory() {
-
-  const container =
-    document.getElementById("weightHistory");
-
-  if (!data.weights.length) {
-
-    container.innerHTML = `
-      <div class="empty">
-        <div class="empty-icon">⚖️</div>
-        <p>No weight entries yet.</p>
-      </div>
-    `;
-
-    return;
-  }
-
-  const entries =
-    [...data.weights].reverse();
-
-  container.innerHTML =
-    entries.map(weight => {
-
-      return `
-
-        <div class="weight-entry">
-
-          <div>
-
-            <strong>
-              ${weight.kg.toFixed(1)} KG
-            </strong>
-
-            <div class="exercise-detail">
-              ${weight.lb.toFixed(1)} LB
-            </div>
-
-            ${
-              weight.notes
-                ? `
-                  <div class="exercise-detail">
-                    ${escapeHtml(weight.notes)}
-                  </div>
-                `
-                : ""
-            }
-
-          </div>
-
-          <div style="display:flex;align-items:center;gap:8px;">
-
-            <span class="muted">
-              ${formatDate(weight.date)}
-            </span>
-
-            <button
-              class="btn btn-small btn-danger"
-              onclick="deleteWeight('${weight.id}')"
-            >
-              ×
-            </button>
-
-          </div>
-
-        </div>
-
-      `;
-
-    }).join("");
-
-}
-
-
-function deleteWeight(id) {
-
-  data.weights =
-    data.weights.filter(
-      weight => weight.id !== id
-    );
-
-  saveData();
-
-  renderAll();
-
-  showToast("Weight entry deleted.");
-
-}
-
-
-/* =========================================================
-   EXERCISE LIBRARY
-========================================================= */
-
 const exerciseLibrary = {
-
-  "Chest": [
-    "Barbell Bench Press",
-    "Incline Barbell Bench Press",
-    "Dumbbell Bench Press",
-    "Incline Dumbbell Press",
-    "Cable Fly",
-    "Chest Fly Machine",
-    "Push-Ups",
-    "Dips"
-  ],
-
-  "Back": [
-    "Pull-Ups",
-    "Lat Pulldown",
-    "Barbell Row",
-    "Dumbbell Row",
-    "Seated Cable Row",
-    "Chest-Supported Row",
-    "T-Bar Row",
-    "Straight-Arm Pulldown"
-  ],
-
-  "Shoulders": [
-    "Overhead Press",
-    "Dumbbell Shoulder Press",
-    "Arnold Press",
-    "Lateral Raises",
-    "Front Raises",
-    "Reverse Fly",
-    "Face Pulls"
-  ],
-
-  "Biceps": [
-    "Barbell Curl",
-    "EZ-Bar Curl",
-    "Dumbbell Curl",
-    "Hammer Curl",
-    "Incline Dumbbell Curl",
-    "Preacher Curl",
-    "Cable Curl"
-  ],
-
-  "Triceps": [
-    "Tricep Pushdown",
-    "Overhead Tricep Extension",
-    "Skull Crushers",
-    "Close-Grip Bench Press",
-    "Dips",
-    "Dumbbell Kickbacks"
-  ],
-
-  "Quads": [
-    "Barbell Squat",
-    "Front Squat",
-    "Leg Press",
-    "Hack Squat",
-    "Bulgarian Split Squat",
-    "Walking Lunges",
-    "Leg Extension"
-  ],
-
-  "Hamstrings": [
-    "Romanian Deadlift",
-    "Stiff-Leg Deadlift",
-    "Lying Leg Curl",
-    "Seated Leg Curl",
-    "Good Mornings",
-    "Nordic Curl"
-  ],
-
-  "Glutes": [
-    "Hip Thrust",
-    "Barbell Hip Thrust",
-    "Glute Bridge",
-    "Bulgarian Split Squat",
-    "Cable Kickback",
-    "Walking Lunges"
-  ],
-
-  "Calves": [
-    "Standing Calf Raise",
-    "Seated Calf Raise",
-    "Leg Press Calf Raise",
-    "Single-Leg Calf Raise"
-  ],
-
-  "Abs": [
-    "Cable Crunch",
-    "Hanging Leg Raise",
-    "Knee Raise",
-    "Ab Wheel Rollout",
-    "Plank",
-    "Decline Sit-Up"
-  ],
-
-  "Full Body": [
-    "Deadlift",
-    "Clean & Press",
-    "Kettlebell Swing",
-    "Farmer's Walk",
-    "Thrusters",
-    "Burpees"
-  ]
-
+  "Chest": ["Barbell Bench Press", "Incline Dumbbell Press", "Chest Flyes", "Dips", "Push-ups"],
+  "Back": ["Lat Pulldown", "Seated Cable Row", "Barbell Row", "Pull-ups", "Deadlift"],
+  "Shoulders": ["Overhead Press", "Lateral Raises", "Front Raises", "Face Pulls"],
+  "Legs": ["Barbell Squat", "Leg Press", "Romanian Deadlift", "Leg Curl", "Calf Raises"],
+  "Arms": ["Barbell Curl", "Hammer Curl", "Tricep Pushdown", "Skull Crushers"]
 };
 
+let data = loadData();
+let currentWeightUnit = "kg";
+let currentWorkoutTemplate = null;
+let builderState = { name: "", description: "", zones: [] };
 
-function renderSuggestions() {
+document.addEventListener("DOMContentLoaded", () => {
+  applyTheme();
+  document.getElementById("weightDate").value = new Date().toISOString().split("T")[0];
+  renderAll();
+});
 
-  const container =
-    document.getElementById("suggestionsContainer");
+/* STORAGE & HELPERS */
+function loadData() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (!saved) return defaultData;
+  try { return { ...defaultData, ...JSON.parse(saved) }; }
+  catch (e) { return defaultData; }
+}
 
-  container.innerHTML =
-    Object.entries(exerciseLibrary)
-      .map(([zone, exercises]) => {
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
 
-        return `
+function escapeHtml(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 
-          <div class="card" style="margin-bottom:18px;">
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
 
-            <div class="card-header">
+function showToast(msg) {
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 3000);
+}
 
-              <h2>
-                ${escapeHtml(zone)}
-              </h2>
+/* NAVIGATION & THEME */
+function showSection(sectionId) {
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  document.getElementById(sectionId).classList.add("active");
 
-              <span class="muted">
-                ${exercises.length} exercises
-              </span>
+  document.querySelectorAll(".nav button").forEach(b => {
+    b.classList.toggle("active", b.dataset.section === sectionId);
+  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
-            </div>
+function toggleTheme() {
+  data.theme = data.theme === "dark" ? "light" : "dark";
+  saveData();
+  applyTheme();
+}
 
-            ${exercises.map(exercise => {
+function applyTheme() {
+  document.body.classList.toggle("dark", data.theme === "dark");
+  renderWeightChart();
+}
 
-              return `
+/* MODALS */
+function openModal(modalId) {
+  document.getElementById(modalId).classList.add("show");
+}
 
-                <div class="suggestion">
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove("show");
+}
 
-                  <div>
-                    <div class="suggestion-name">
-                      ${escapeHtml(exercise)}
-                    </div>
+/* RENDERING */
+function renderAll() {
+  renderDashboard();
+  renderTemplates();
+  renderWeightHistory();
+  renderSuggestions();
+}
 
-                    <div class="suggestion-zone">
-                      ${escapeHtml(zone)}
-                    </div>
-                  </div>
+function renderDashboard() {
+  const templateCount = data.templates.length;
+  const exerciseCount = data.templates.reduce((acc, t) => 
+    acc + t.zones.reduce((zAcc, z) => zAcc + z.exercises.length, 0), 0);
 
-                  <button
-                    class="btn btn-small"
-                    onclick="copyExercise('${escapeAttribute(exercise)}')"
-                  >
-                    Copy
-                  </button>
+  document.getElementById("statTemplates").textContent = templateCount;
+  document.getElementById("statExercises").textContent = exerciseCount;
+  document.getElementById("statWorkouts").textContent = data.workoutHistory.length;
 
-                </div>
+  const latestWeight = data.weights.length ? data.weights[data.weights.length - 1] : null;
+  document.getElementById("statWeight").textContent = latestWeight ? `${latestWeight.kg.toFixed(1)} KG` : "--";
 
-              `;
+  renderDashboardWeight();
+  renderDashboardTemplates();
+}
 
-            }).join("")}
+function renderDashboardWeight() {
+  const container = document.getElementById("dashboardWeight");
+  if (!data.weights.length) {
+    container.innerHTML = `<div class="empty"><div class="empty-icon">⚖️</div><p>No weight entries yet.</p></div>`;
+    return;
+  }
+  const recent = [...data.weights].reverse().slice(0, 4);
+  container.innerHTML = recent.map(w => `
+    <div class="weight-entry">
+      <div>
+        <strong>${w.kg.toFixed(1)} KG</strong>
+        <div class="exercise-detail">${w.lb.toFixed(1)} LB</div>
+      </div>
+      <div class="muted">${formatDate(w.date)}</div>
+    </div>
+  `).join("");
+}
 
+function renderDashboardTemplates() {
+  const container = document.getElementById("dashboardTemplates");
+  if (!data.templates.length) {
+    container.innerHTML = `<div class="empty"><div class="empty-icon">📋</div><p>No templates yet.</p></div>`;
+    return;
+  }
+  container.innerHTML = data.templates.slice(0, 4).map(t => {
+    const exCount = t.zones.reduce((acc, z) => acc + z.exercises.length, 0);
+    return `
+      <div class="weight-entry">
+        <div>
+          <strong>${escapeHtml(t.name)}</strong>
+          <div class="exercise-detail">${t.zones.length} zones · ${exCount} exercises</div>
+        </div>
+        <button class="btn btn-small" onclick="startWorkout('${t.id}')">Start</button>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderTemplates() {
+  const container = document.getElementById("templatesContainer");
+  if (!data.templates.length) {
+    container.innerHTML = `<div class="card empty"><div class="empty-icon">🏋️</div><p>No templates added yet.</p></div>`;
+    return;
+  }
+
+  container.innerHTML = data.templates.map(t => `
+    <div class="card template-card">
+      <div class="card-header">
+        <div>
+          <h3>${escapeHtml(t.name)}</h3>
+          <div class="template-meta">${escapeHtml(t.description || "No description")}</div>
+        </div>
+        <div class="template-actions">
+          <button class="btn btn-primary btn-small" onclick="startWorkout('${t.id}')">▶ Start Workout</button>
+          <button class="btn btn-small" onclick="openTemplateModal('${t.id}')">✏️ Edit</button>
+          <button class="btn btn-danger btn-small" onclick="deleteTemplate('${t.id}')">🗑️ Delete</button>
+        </div>
+      </div>
+      ${t.zones.map(z => `
+        <div class="zone">
+          <div class="zone-header">
+            <span class="zone-title">📍 ${escapeHtml(z.name)}</span>
           </div>
-
-        `;
-
-      }).join("");
-
+          <div class="exercise-list">
+            ${z.exercises.map(ex => `
+              <div class="exercise-row">
+                <span class="exercise-name">${escapeHtml(ex.name)}</span>
+                <span class="exercise-detail">${ex.sets} Sets</span>
+                <span class="exercise-detail">${ex.reps} Reps</span>
+                <span class="exercise-detail">${ex.weight ? ex.weight + ' kg' : 'Bodyweight'}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `).join("");
 }
 
+/* TEMPLATE BUILDER */
+function openTemplateModal(templateId = null) {
+  if (templateId) {
+    const t = data.templates.find(item => item.id === templateId);
+    builderState = JSON.parse(JSON.stringify(t));
+    document.getElementById("templateModalTitle").textContent = "Edit Workout Template";
+    document.getElementById("editingTemplateId").value = templateId;
+  } else {
+    builderState = { id: generateId(), name: "", description: "", zones: [] };
+    document.getElementById("templateModalTitle").textContent = "Create Workout Template";
+    document.getElementById("editingTemplateId").value = "";
+  }
 
-function copyExercise(name) {
-
-  navigator.clipboard
-    .writeText(name)
-    .then(() => {
-
-      showToast(
-        `${name} copied to clipboard.`
-      );
-
-    })
-    .catch(() => {
-
-      showToast("Exercise copied.");
-
-    });
-
+  document.getElementById("templateName").value = builderState.name;
+  document.getElementById("templateDescription").value = builderState.description;
+  renderBuilderZones();
+  openModal("templateModal");
 }
 
+function renderBuilderZones() {
+  const container = document.getElementById("builderZones");
+  container.innerHTML = builderState.zones.map((zone, zIdx) => `
+    <div class="builder-zone">
+      <div class="builder-zone-header">
+        <strong>${escapeHtml(zone.name)}</strong>
+        <button class="btn btn-danger btn-small" onclick="removeBuilderZone(${zIdx})">Remove Zone</button>
+      </div>
+      <div class="builder-exercises">
+        ${zone.exercises.map((ex, eIdx) => `
+          <div class="builder-exercise">
+            <input type="text" placeholder="Exercise name" value="${escapeHtml(ex.name)}" onchange="updateBuilderExercise(${zIdx},${eIdx}, 'name', this.value)" />
+            <input type="number" placeholder="Sets" value="${ex.sets}" onchange="updateBuilderExercise(${zIdx},${eIdx}, 'sets', this.value)" />
+            <input type="number" placeholder="Reps" value="${ex.reps}" onchange="updateBuilderExercise(${zIdx},${eIdx}, 'reps', this.value)" />
+            <input type="number" placeholder="Kg" value="${ex.weight || ''}" onchange="updateBuilderExercise(${zIdx},${eIdx}, 'weight', this.value)" />
+            <button class="btn btn-danger btn-small" onclick="removeBuilderExercise(${zIdx},${eIdx})">×</button>
+          </div>
+        `).join("")}
+        <button class="btn btn-small" style="margin-top:8px;" onclick="addExerciseToBuilderZone(${zIdx})">+ Add Exercise</button>
+      </div>
+    </div>
+  `).join("");
+}
 
-/* =========================================================
-   EXPORT / IMPORT
-========================================================= */
+function addZoneToBuilder() {
+  const nameInput = document.getElementById("newZoneName");
+  const name = nameInput.value.trim();
+  if (!name) return;
+  builderState.zones.push({ id: generateId(), name, exercises: [] });
+  nameInput.value = "";
+  renderBuilderZones();
+}
 
+function removeBuilderZone(zIdx) {
+  builderState.zones.splice(zIdx, 1);
+  renderBuilderZones();
+}
+
+function addExerciseToBuilderZone(zIdx) {
+  builderState.zones[zIdx].exercises.push({ id: generateId(), name: "", sets: 3, reps: 10, weight: 0 });
+  renderBuilderZones();
+}
+
+function updateBuilderExercise(zIdx, eIdx, field, val) {
+  builderState.zones[zIdx].exercises[eIdx][field] = field === 'name' ? val : Number(val);
+}
+
+function removeBuilderExercise(zIdx, eIdx) {
+  builderState.zones[zIdx].exercises.splice(eIdx, 1);
+  renderBuilderZones();
+}
+
+function saveTemplate() {
+  builderState.name = document.getElementById("templateName").value.trim() || "Untitled Workout";
+  builderState.description = document.getElementById("templateDescription").value.trim();
+
+  if (!builderState.zones.length) {
+    alert("Please add at least one zone and exercise.");
+    return;
+  }
+
+  const editId = document.getElementById("editingTemplateId").value;
+  if (editId) {
+    const idx = data.templates.findIndex(t => t.id === editId);
+    if (idx !== -1) data.templates[idx] = builderState;
+  } else {
+    data.templates.push(builderState);
+  }
+
+  saveData();
+  renderAll();
+  closeModal("templateModal");
+  showToast("Template saved successfully!");
+}
+
+function deleteTemplate(id) {
+  if (confirm("Delete this workout template?")) {
+    data.templates = data.templates.filter(t => t.id !== id);
+    saveData();
+    renderAll();
+    showToast("Template deleted.");
+  }
+}
+
+/* WORKOUT EXECUTION */
+function startWorkout(templateId) {
+  const template = data.templates.find(t => t.id === templateId);
+  if (!template) return;
+
+  currentWorkoutTemplate = JSON.parse(JSON.stringify(template));
+  document.getElementById("workoutTitle").textContent = currentWorkoutTemplate.name;
+
+  const container = document.getElementById("workoutContent");
+  container.innerHTML = currentWorkoutTemplate.zones.map(z => `
+    <div class="zone">
+      <div class="zone-header">
+        <span class="zone-title">📍 ${escapeHtml(z.name)}</span>
+      </div>
+      <div class="exercise-list">
+        ${z.exercises.map(ex => `
+          <div style="margin-bottom: 12px;">
+            <strong>${escapeHtml(ex.name)}</strong>
+            <div class="form-row-3" style="margin-top:6px;">
+              <div>
+                <label style="font-size:11px;">Target Sets</label>
+                <input type="number" value="${ex.sets}" disabled />
+              </div>
+              <div>
+                <label style="font-size:11px;">Reps Performed</label>
+                <input type="number" value="${ex.reps}" />
+              </div>
+              <div>
+                <label style="font-size:11px;">Weight (kg)</label>
+                <input type="number" value="${ex.weight}" />
+              </div>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `).join("");
+
+  openModal("workoutModal");
+}
+
+function completeWorkout() {
+  data.workoutHistory.push({
+    id: generateId(),
+    templateId: currentWorkoutTemplate.id,
+    name: currentWorkoutTemplate.name,
+    date: new Date().toISOString()
+  });
+
+  saveData();
+  renderDashboard();
+  closeModal("workoutModal");
+  showToast("Workout logged! Great job! 🎉");
+}
+
+/* WEIGHT TRACKER */
+function setWeightUnit(unit) {
+  currentWeightUnit = unit;
+  document.getElementById("kgButton").classList.toggle("active", unit === 'kg');
+  document.getElementById("lbButton").classList.toggle("active", unit === 'lb');
+}
+
+function addWeight() {
+  const val = parseFloat(document.getElementById("weightValue").value);
+  const date = document.getElementById("weightDate").value;
+  const notes = document.getElementById("weightNotes").value.trim();
+
+  if (isNaN(val) || !date) {
+    alert("Please enter a valid weight and date.");
+    return;
+  }
+
+  const kg = currentWeightUnit === "kg" ? val : val / 2.20462;
+  const lb = currentWeightUnit === "lb" ? val : val * 2.20462;
+
+  data.weights.push({ id: generateId(), date, kg, lb, notes });
+  data.weights.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  saveData();
+  renderAll();
+  document.getElementById("weightValue").value = "";
+  document.getElementById("weightNotes").value = "";
+  showToast("Weight recorded!");
+}
+
+function deleteWeight(id) {
+  data.weights = data.weights.filter(w => w.id !== id);
+  saveData();
+  renderAll();
+  showToast("Entry removed.");
+}
+
+function renderWeightHistory() {
+  const container = document.getElementById("weightHistory");
+  if (!data.weights.length) {
+    container.innerHTML = `<div class="empty"><p>No weight logs available.</p></div>`;
+    return;
+  }
+
+  container.innerHTML = [...data.weights].reverse().map(w => `
+    <div class="weight-entry">
+      <div>
+        <strong>${w.kg.toFixed(1)} KG / ${w.lb.toFixed(1)} LB</strong>
+        <div class="exercise-detail">${formatDate(w.date)} ${w.notes ? '• ' + escapeHtml(w.notes) : ''}</div>
+      </div>
+      <button class="btn btn-danger btn-small" onclick="deleteWeight('${w.id}')">🗑️</button>
+    </div>
+  `).join("");
+
+  renderWeightChart();
+}
+
+function renderWeightChart() {
+  const canvas = document.getElementById("weightChart");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  
+  canvas.width = canvas.parentElement.clientWidth - 40;
+  canvas.height = 180;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  if (data.weights.length < 2) {
+    ctx.fillStyle = data.theme === 'dark' ? '#94a3b8' : '#6b7280';
+    ctx.font = '13px Inter';
+    ctx.fillText('Log at least 2 entries to display weight progress chart.', 10, 90);
+    return;
+  }
+
+  const padding = 30;
+  const weights = data.weights.map(w => w.kg);
+  const minW = Math.min(...weights) - 2;
+  const maxW = Math.max(...weights) + 2;
+
+  ctx.beginPath();
+  ctx.strokeStyle = '#6366f1';
+  ctx.lineWidth = 3;
+
+  weights.forEach((w, i) => {
+    const x = padding + (i / (weights.length - 1)) * (canvas.width - padding * 2);
+    const y = canvas.height - padding - ((w - minW) / (maxW - minW)) * (canvas.height - padding * 2);
+
+    if (i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  });
+
+  ctx.stroke();
+}
+
+/* EXERCISE SUGGESTIONS */
+function renderSuggestions() {
+  const container = document.getElementById("suggestionsContainer");
+  container.innerHTML = Object.entries(exerciseLibrary).map(([zone, items]) => `
+    <div class="card" style="margin-bottom: 16px;">
+      <div class="card-header">
+        <h2>${zone}</h2>
+      </div>
+      ${items.map(ex => `
+        <div class="suggestion">
+          <div>
+            <div class="suggestion-name">${ex}</div>
+            <div class="suggestion-zone">Primary Target: ${zone}</div>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `).join("");
+}
+
+/* EXPORT / IMPORT */
 function exportData() {
-
-  const json =
-    JSON.stringify(data, null, 2);
-
-  const blob =
-    new Blob(
-      [json],
-      { type: "application/json" }
-    );
-
-  const url =
-    URL.createObjectURL(blob);
-
-  const link =
-    document.createElement("a");
-
-  link.href = url;
-
-  link.download =
-    "gymtrack-backup.json";
-
-  link.click();
-
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `gymtrack_backup_${new Date().toISOString().split('T')[0]}.json`;
+  a.click();
   URL.revokeObjectURL(url);
-
-  showToast("Data exported.");
-
 }
 
-
-function importData(event) {
-
-  const file =
-    event.target.files[0];
-
+function importData(e) {
+  const file = e.target.files[0];
   if (!file) return;
 
-  const reader =
-    new FileReader();
-
-  reader.onload = function(e) {
-
+  const reader = new FileReader();
+  reader.onload = (event) => {
     try {
-
-      const imported =
-        JSON.parse(e.target.result);
-
-      if (
-        !imported.templates ||
-        !imported.weights
-      ) {
-
-        throw new Error(
-          "Invalid GymTrack backup."
-        );
-
+      const imported = JSON.parse(event.target.result);
+      if (imported.templates && imported.weights) {
+        data = imported;
+        saveData();
+        renderAll();
+        showToast("Data imported successfully!");
+      } else {
+        alert("Invalid file structure.");
       }
-
-      data = imported;
-
-      saveData();
-
-      applyTheme();
-
-      renderAll();
-
-      showToast(
-        "Data imported successfully."
-      );
-
-    } catch (error) {
-
-      alert(
-        "Could not import this file. " +
-        "Make sure it is a GymTrack JSON backup."
-      );
-
+    } catch (err) {
+      alert("Error parsing backup JSON file.");
     }
-
   };
-
   reader.readAsText(file);
-
 }
-
-
-/* =========================================================
-   UTILITIES
-========================================================= */
-
-function formatDate(dateString) {
-
-  const date =
-    new Date(dateString);
-
-  return date.toLocaleDateString(
-    undefined,
-    {
-      month: "short",
-      day: "numeric",
-      year: "numeric"
-    }
-  );
-
-}
-
-
-function escapeHtml(value) {
-
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-
-}
-
-
-function escapeAttribute(value) {
-
-  return escapeHtml(value)
-    .replaceAll("`", "&#096;");
-}
-
-
-function showToast(message) {
-
-  const toast =
-    document.getElementById("toast");
-
-  toast.textContent = message;
-
-  toast.classList.add("show");
-
-  setTimeout(() => {
-
-    toast.classList.remove("show");
-
-  }, 2500);
-
-}
-
-
-/* =========================================================
-   CLOSE MODALS WHEN CLICKING OUTSIDE
-========================================================= */
-
-document.addEventListener("click", function(event) {
-
-  if (
-    event.target.classList.contains(
-      "modal-overlay"
-    )
-  ) {
-
-    event.target.classList.remove("show");
-
-  }
-
-});
-
-
-/* =========================================================
-   ESCAPE KEY
-========================================================= */
-
-document.addEventListener("keydown", function(event) {
-
-  if (event.key === "Escape") {
-
-    document
-      .querySelectorAll(".modal-overlay.show")
-      .forEach(modal => {
-
-        modal.classList.remove("show");
-
-      });
-
-  }
-
-});
-
 </script>
 
 </body>
